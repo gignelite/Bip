@@ -1,0 +1,68 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url("images/bg.jpg") repeat scroll 0% 0% transparent;
+}
+
+#logo {
+	margin: 0px;
+	padding: 0px;
+	background-image: url("images/logo2.png");
+	width: 400px;
+	height: 118px;
+	/*background-size: cover;
+	-webkit-background-size: cover;*/
+}
+
+#menu {
+	width: 400px;
+	height: 42px;
+	background: url("images/back_menu.png") repeat-x;
+	border: 1px solid rgb(192, 192, 192);
+	vertical-align: top;
+	z-index: 1;
+}
+
+#menu img {
+	padding: 0;
+	margin: 0;
+	border-spacing: 0px;
+	/*margin: 0px 0px 0px -4px;*/
+}
+
+#menu div {
+	display: inline-block;
+	font-family: Arial,sans-serif;
+	text-shadow: 2px 2px 4px rgb(0, 0, 0);
+	padding: 0px 10px 0px 10px;
+	font-size: 13px;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	height: 40px;
+	vertical-align: top;
+	cursor: pointer;
+	background: url('images/back_menuHover.jpg') repeat-x 0px 42px;
+	z-index: -1;
+	transition: background 0.3s ease-in-out;
+}
+
+#menu div:hover {
+	background: url('images/back_menuHover.jpg') 0px 0px repeat-x;
+}
+
+#corps {
+	background-image: url("images/BOSS900.png") ;
+	width: 400px;
+	height: 545px;
+}
+#btn_jaune {
+	background: url('images/btn_juane.png') no-repeat;
+	width: 123px;
+	height: 115px;
+}

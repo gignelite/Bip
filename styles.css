@@ -1,0 +1,383 @@
+* {
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url("fenFille/images/bg.jpg") repeat scroll 0% 0% transparent;
+	color: black;
+	text-align: center;
+}
+
+ul, li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+input,
+.entete-liste-infos-sapeur {
+	display: inline-block;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    border: 1px solid #cccccc;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+input:hover,
+.entete-liste-infos-sapeur:hover {
+	color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+input:active,
+.entete-liste-infos-sapeur:active {
+	background-image: none;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    outline: 0;
+}
+
+	#bip {
+		background-color: rgb(200, 200, 200);
+		display: inline-block;
+		width: 600px;
+		text-align: left;
+	}
+
+	#logo {
+		margin: 0px;
+		padding: 0px;
+		width: 600px;
+		height: 177px;
+		/*background-image: url("fenFille/images/logo.png");*/
+		/*width: 400px;
+		height: 118px;*/
+		/*background-size: cover;
+		-webkit-background-size: cover;*/
+	}
+	
+	#entete-bip {
+		letter-spacing: -0.31em;
+		text-align: center;
+	}
+	
+		.entete-options,
+		.entete-informations {
+			text-align: center;
+			display: inline-block;
+			width: 49%;
+			letter-spacing: normal;
+			height: 130px;
+			vertical-align: top;
+			/*background-color: grey;*/
+		}
+		
+			#entete-options-button input {
+				width: 100%;
+				margin-top: 3px;
+			}
+			
+			#entete-options-button input[type="button"] {
+				width: 40%;
+			}
+	
+	#liste-infos-joueur {
+		/*background-color: grey;*/
+	}
+	
+		#liste-infos-joueur ul {
+			margin: 0px;
+			text-align: center;
+		}
+		
+			#liste-infos-joueur ul li {
+				/*display: inline-block;*/
+				margin-left: 2em;
+				/*width: 40%;*/
+				text-align: left;
+				margin-top: 3px;
+				/*margin-right: 1.5em;*/
+			}
+	
+	
+	/*#entete-infos-sapeur {
+		width: 100%;
+	}
+	
+		#entete-infos-sapeur ul li {
+			display: inline-block;
+			padding: 5px 0px 5px 0px;
+			border: 1px solid;
+			text-align: center;
+			transition: background-color 0.5s ease-out;
+			cursor: pointer;
+			-moz-box-shadow: 0px 15px 10px -10px #656565;
+			-webkit-box-shadow: 0px 15px 10px -10px #656565;
+			-o-box-shadow: 0px 15px 10px -10px #656565;
+			box-shadow: 0px 15px 10px -10px #656565;
+		}
+		
+		#entete-infos-sapeur ul li:active {
+			-moz-box-shadow: 0px 10px 10px -10px #656565;
+			-webkit-box-shadow: 0px 10px 10px -10px #656565;
+			-o-box-shadow: 0px 10px 10px -10px #656565;
+			box-shadow: 0px 10px 10px -10px #656565;
+		}
+		
+		#entete-infos-sapeur ul li + li {
+			border-left: none;
+		}
+		
+		#entete-infos-sapeur ul li:hover {
+			background-color: rgba(255, 0, 0, 0.2);
+			transition: background-color 0.5s ease-out;
+		}*/
+		
+	#cadre-sapeur {
+		width: 100%;
+		padding: 10px;
+	}
+	
+		#infos-sapeur {
+			width: 24%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+			#infos-sapeur .entete-liste-infos-sapeur {
+				border: 1px solid;
+				border-bottom: none;
+				width: 100%;
+				padding: 5px 0px 5px 0px;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			#infos-sapeur .un-sapeur:last-child .entete-liste-infos-sapeur {
+				border-bottom: 1px solid;
+			}
+	
+			.liste-infos-sapeur {
+				/*width: 24%;*/
+				/*height: 200px;*/
+				display: none;
+				/*vertical-align: top;*/
+			}
+
+				.liste-infos-sapeur ul {
+					margin-left: 20px;
+				}
+				
+				.liste-infos-sapeur ul li {
+					list-style-type: disc; 
+				}
+	
+	
+	
+	
+		#events {
+			/*padding: 10px;*/
+			width: 75%;
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+		}
+		
+		#events div {
+			text-align: left;
+			vertical-align: middle;
+		}
+			
+			#events div[id*="cadre"] {
+				display: inline-block;
+				border: 1px solid;
+				overflow-x: hidden;
+				overflow-y: auto;
+				/*padding: 5px;*/
+			}
+			
+			
+			#events #cadre-event {
+				width: 100%;
+				height: 200px;
+				background-color: white;
+				vertical-align: top;
+			}
+			
+			#events #event ul {
+				/*position: relative;*/
+			}
+				
+				#events #event li {
+					position: relative;
+					/*display: block;*/
+					background-color: #FFFFFF;
+					transition-property: background-color;
+					transition-duration: 1s;
+					transition-timing-function: ease-out;
+					display: flex;
+					flex-direction: row;
+					/*padding: 5px 0px 5px 0px;*/
+					border-bottom: 1px groove black;
+				}
+				
+				#events #event li:hover {
+					transition-property: background-color;
+					transition-duration: 1s;
+					transition-timing-function: ease-out;
+					background-color: rgba(110, 110, 110, 0.2);
+				}
+				
+				#events #event li:last-child {
+					border-bottom: none;
+				}
+				
+				#events #event li.nouveau {
+					animation-duration: 1s;
+					animation-name: changeToNew;
+					animation-fill-mode: forwards;
+				}
+				
+				@keyframes changeToNew {
+					from {
+						background-color: #FFFFFF;
+					}
+					to {
+						background-color: #FFCC66;
+					}
+				}
+				
+				/*#events #event li.delete {
+					position: relative;
+					left: 600px;
+					
+					animation-duration: 2s;
+					animation-name: moveout;
+					animation-fill-mode: forwards;
+				}*/
+				
+				/*@keyframes moveout {
+					from {
+						position: relative;
+						left: 0px;
+					}
+					to {
+						position: absolute;
+						left: 600px;
+					}
+				}*/
+				
+				#events #event li span {
+					display: flex;
+					display: -webkit-flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+				
+					#events #event li span.date,
+					#events #event li span.suppr {
+						width: 20px;
+						text-align: center;
+						padding: 0px 5px 0px 5px;
+					}
+					
+					#events #event li span.date {
+						cursor: help;
+						width: 30px;
+					}
+					
+					#events #event li span.suppr {
+						color: rgb(204, 0, 0);
+						cursor: pointer;
+						width: 25px;
+					}
+					
+					#events #event li span.suppr:hover {
+						background-color: rgb(154, 0, 0);
+					}
+					
+					#events #event li span.suppr:hover {
+						color: white;
+					}
+					
+					#events #event li span.contenu {
+						width: 510px;
+						padding: 0px 5px 0px 5px;
+						margin: 5px 0px 5px 0px;
+						border-left: 1px dotted;
+						/*border-right: 1px dotted;*/
+					}
+				
+				
+		
+		/* #events #right-event {
+			height: 200px;
+			display: inline-block;
+			width: 39%;
+		}
+		
+			#events #right-event div[id*="cadre"] {
+				width: 100%;
+				height: 97.5px;
+			}
+			
+			#events #right-event #cadre-interventions {
+				margin-bottom: 5px;
+			}
+			
+				#events div[id*="cadre"] ul li span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+				
+				#events div[id*="cadre"] ul li span.date {
+					min-width: 10px;
+				}
+				
+				#events div[id*="cadre"] ul li span.contenu {
+					width: ;
+					border: 1px solid;
+				}
+				
+				#events div[id*="cadre"] ul li span.suppr {
+					min-width: 10px;
+				} */
