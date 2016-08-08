@@ -8,7 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/css/font-awesome.min.css" />
 	</head>
 	<body>
-		
 		<div id="bip">
 			<div id="logo">
 				<img src="fenfille/images/logo.png" width="600" height="177"/>
@@ -16,6 +15,10 @@
 			
 			<!-- <input type="button" id="appelFille" value="ouvrir" /> -->
 			<!-- <input type="button" id="test" value="test" /> -->
+			
+			<div id="nav">
+				<span id="options"><i class="fa fa-bars" aria-hidden="true"></i> Options</span>
+			</div>
 			
 			<div id="entete-bip">
 				<fieldset class="entete-options">
