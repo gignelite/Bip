@@ -17,7 +17,30 @@
 			<!-- <input type="button" id="test" value="test" /> -->
 			
 			<div id="nav">
-				<span id="options"><i class="fa fa-bars" aria-hidden="true"></i> Options</span>
+				<span id="nav-bouton"><i class="fa fa-bars" aria-hidden="true"></i> Options</span>
+				<div id="back-options">
+					<div id="options">
+						<div class="une-option">
+							<div class="label">
+								Mail : 
+							</div>
+							<div class="input">
+								<input type="mail" />
+							</div>
+						</div>
+						<div class="une-option">
+							<div class="label">
+								Code : 
+							</div>
+							<div class="input">
+								<input type="password" />
+							</div>
+						</div>
+						<div class="valider">
+							<input type="button" value="Valider" />
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<div id="entete-bip">

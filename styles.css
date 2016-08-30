@@ -81,6 +81,7 @@ input:active,
 		display: inline-block;
 		width: 600px;
 		text-align: left;
+		overflow: ;
 	}
 
 		#logo {
@@ -102,11 +103,26 @@ input:active,
 			color: white;
 			font-size: 18px;
 			padding: 5px 10px;
+			position: relative;
 		}
 		
-			#option {
+			#nav #nav-bouton {
 				cursor: pointer;
 			}
+			
+			#nav #back-options {
+				width: 300px;
+				position: absolute;
+				top: 31px;
+				left: 0px;
+				background-color: white;
+				padding: 2px;
+			}
+			
+				#nav #options {
+					border-right: 1px solid #761004;
+					border-bottom: 1px solid #761004;
+				}
 	
 		#entete-bip {
 			letter-spacing: -0.31em;
