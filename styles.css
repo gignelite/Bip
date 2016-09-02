@@ -18,7 +18,27 @@ ul, li {
 	list-style: none;
 }
 
-input,
+input[type="text"], input[type="mail"], input[type="password"] {
+	box-shadow: inset 0px -1px 5px -4px #000000;
+	border-radius: 0px;
+	background: none;
+	background-color: white;
+	padding: 4px 7px;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border: 1px solid #cccccc;
+    transition: border 0.5s;
+}
+
+input[type="text"]:hover, input[type="mail"]:hover, input[type="password"]:hover {
+	border: 1px solid #8a8a8a;
+}
+
+input[type="text"]:focus, input[type="mail"]:focus, input[type="password"]:focus {
+	border: 1px solid #8a8a8a;
+}
+
+/*input,
 .entete-liste-infos-sapeur {
 	display: inline-block;
     padding: 4px 10px 4px;
@@ -74,14 +94,14 @@ input:active,
     background-color: #e6e6e6;
     background-color: #d9d9d9 \9;
     outline: 0;
-}
+}*/
 
 	#bip {
 		background-color: rgb(200, 200, 200);
 		display: inline-block;
 		width: 600px;
 		text-align: left;
-		overflow: ;
+		overflow: hidden;
 	}
 
 		#logo {
@@ -110,19 +130,49 @@ input:active,
 				cursor: pointer;
 			}
 			
+				#nav #nav-bouton i {
+					width: 15px;
+				}
+			
 			#nav #back-options {
 				width: 300px;
 				position: absolute;
-				top: 31px;
-				left: 0px;
+				top: 32px;
+				/*left: 0px;*/
 				background-color: white;
-				padding: 2px;
+				padding: 0px 2px 2px 0px;
+			}
+			
+			#nav #back-options.ouvert {
+				transition: left 0.5s;
+				left: 0px;
+			}
+			
+			#nav #back-options.fermer {
+				transition: left 0.5s;
+				left:-300px;
 			}
 			
 				#nav #options {
 					border-right: 1px solid #761004;
 					border-bottom: 1px solid #761004;
+					color: black;
+					padding: 10px;
+					font-size: 14px;
+					height: 348px;
 				}
+					
+					#nav #options .une-option:first-child {
+						margin-top: 0px;
+					}
+					
+					#nav #options .une-option {
+						margin: 10px 0px;
+					}
+				
+						#nav #options input {
+							width: 100%;
+						}
 	
 		#entete-bip {
 			letter-spacing: -0.31em;

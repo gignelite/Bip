@@ -17,15 +17,16 @@
 			<!-- <input type="button" id="test" value="test" /> -->
 			
 			<div id="nav">
-				<span id="nav-bouton"><i class="fa fa-bars" aria-hidden="true"></i> Options</span>
-				<div id="back-options">
+				<span id="nav-bouton" data-menu="fermer"><i class="fa fa-bars" aria-hidden="true"></i> Options</span>
+				<div id="back-options" class="fermer">
 					<div id="options">
 						<div class="une-option">
 							<div class="label">
 								Mail : 
 							</div>
 							<div class="input">
-								<input type="mail" />
+								<input class="supp-possible" type="mail" />
+								<!-- <div class="croix-supp"><i class="fa fa-times"></i></div> -->
 							</div>
 						</div>
 						<div class="une-option">
@@ -33,7 +34,7 @@
 								Code : 
 							</div>
 							<div class="input">
-								<input type="password" />
+								<input class="supp-possible" type="password" />
 							</div>
 						</div>
 						<div class="valider">
@@ -158,12 +159,64 @@
 	
 	// Bonjour ceci est un commentaire que pourra voir paulo après modifs et push vers le serveur (il lui faudra tout de même synchroniser !!)
 	
+	/* ### Gestion sommaire fenetre ### */
+	
+	var div_croix = document.createElement('div');
+	div_croix.setAttribute('class', 'croix-supp');
+	
+	var i_croix = document.createElement('i');
+	i_croix.setAttribute('class', 'fa fa-times');
+	
+	div_croix.appendChild(i_croix);
+	$('input.supp-possible').after(div_croix);
+	
+	// $('input.can-delete');
+	
+	
+	
+	
+	
+	$('#nav-bouton').on('click', toggle_options);
+	
+	function toggle_options() {
+		var etat = $('#nav-bouton').data('menu');
+		if(etat == "fermer") {
+			$('#nav-bouton').children('i').removeClass('fa-bars').addClass('fa-times');
+			$('#nav-bouton').data('menu', 'ouvert');
+			$('#nav #back-options').removeClass('fermer').addClass('ouvert');
+			$('#nav-bouton').data('menu', 'ouvert');
+			$(document).on('click', click_document_options);
+			return false; // Nécessaire pour empêcher la fin de propagation de l'event click actuel et de déclencher le listner au-dessus
+		} else {
+			$('#nav-bouton').children('i').removeClass('fa-times').addClass('fa-bars');
+			$('#nav-bouton').data('menu', 'fermer');
+			$('#nav #back-options').removeClass('ouvert').addClass('fermer');
+			$('#nav-bouton').data('menu', 'fermer');
+			$(document).off('click', click_document_options);
+			return false;
+		}
+	}
+	
+	function click_document_options(e) {
+		// console.log(e);
+		if(!e.target.closest('#back-options')) {
+			toggle_options();
+		}
+	}
+	
+	/* ### Fin gestion sommaire fenetre ### */
+	
 	// "use strict";
 	
 	// C'est pour la fin, par pour maintenant (à réfléchir, mauvaise méthode)
 	$('#appelFille').on('click', function () {
 		fen = window.open("fenFille/bip.php", "", "width=500, height=500, titlebar=0, menubar=0, toolbar=0, location=0, status=0, scrollbars=0, resizable=0") ;
 	}) ;
+	
+	
+	
+	
+	
 	
 	$('#test').on('click', function() {
 		var joueur = Joueur.getInstance();
