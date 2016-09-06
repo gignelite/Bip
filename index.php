@@ -24,35 +24,34 @@
 							<div class="label">
 								Mail : 
 							</div>
-							<div class="input">
-								<input class="supp-possible" type="mail" />
-								<!-- <div class="croix-supp"><i class="fa fa-times"></i></div> -->
+							<div class="input noSwipe">
+								<input class="supp-possible" type="mail" id="mail-joueur" value="unmailbeaucouppluslong@test.fr" />
 							</div>
 						</div>
 						<div class="une-option">
 							<div class="label">
 								Code : 
 							</div>
-							<div class="input">
-								<input class="supp-possible" type="password" />
+							<div class="input noSwipe">
+								<input class="supp-possible" id="pass-joueur" type="password" value="QSEz9I" />
 							</div>
 						</div>
 						<div class="valider">
-							<input type="button" value="Valider" />
+							<input type="button" id="recupPlayerInfos" value="Valider" />
 						</div>
 					</div>
 				</div>
 			</div>
 			
 			<div id="entete-bip">
-				<fieldset class="entete-options">
+				<!-- <fieldset class="entete-options">
 					<legend> Informations de connexion </legend>
 					<div id="entete-options-button">
 						<input type="text" id="mail" placeholder="Mail" value="unmailbeaucouppluslong@test.fr" />
 						<input type="text" id="pass" placeholder="Code API" value="QSEz9I" />
 						<input type="button" id="recupPlayerInfos" value="envoyer" />
 					</div>
-				</fieldset>
+				</fieldset> -->
 				
 				<fieldset class="entete-informations">
 					<legend> Informations du joueur </legend>
@@ -190,8 +189,8 @@
 	// On identifie le joueur au click, si il existe, alors on peut récupérer ses infos
 	// et les afficher une première fois
 	$('#recupPlayerInfos').on('click', function() {
-		parametres.mail = $('#mail').val();
-		parametres.pass = $('#pass').val();
+		parametres.mail = $('#mail-joueur').val();
+		parametres.pass = $('#pass-joueur').val();
 		
 		var joueur = Joueur.getInstance();
 		
@@ -227,13 +226,14 @@
 <script type="text/javascript" src="classe/ctrl_event.js"></script>
 <script src="classe/event.js" ></script>
 <script type="text/javascript" src="jgestures.js"></script>
-<script type="text/javascript" src="ergonomie.js"></script>
-<script type="text/javascript" src="swipeEvent.js"></script>
+<script type="text/javascript" src="jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="classe/ergonomie.js"></script>
+<!-- <script type="text/javascript" src="swipeEvent.js"></script> -->
 
 <script type="text/javascript">
 	
 	// Script test
 	
-	$('.text').swipeEvent();
+	// $('.text').swipeEvent();
 	
 </script>

@@ -19,7 +19,7 @@ ul, li {
 }
 
 input[type="text"], input[type="mail"], input[type="password"] {
-	box-shadow: inset 0px -1px 5px -4px #000000;
+	box-shadow: inset 0px 0px 8px -5px #000000;
 	border-radius: 0px;
 	background: none;
 	background-color: white;
@@ -37,6 +37,21 @@ input[type="text"]:hover, input[type="mail"]:hover, input[type="password"]:hover
 input[type="text"]:focus, input[type="mail"]:focus, input[type="password"]:focus {
 	border: 1px solid #8a8a8a;
 }
+
+
+.input {
+	position: relative;
+}
+
+.input:hover .croix-supp {
+	display: block;
+} 
+
+	.croix-supp {
+		position: absolute;
+		display: none;
+		cursor: pointer;
+	}
 
 /*input,
 .entete-liste-infos-sapeur {
@@ -138,19 +153,32 @@ input:active,
 				width: 300px;
 				position: absolute;
 				top: 32px;
-				/*left: 0px;*/
+				left: 0px;
 				background-color: white;
 				padding: 0px 2px 2px 0px;
+				z-index: 5;
 			}
 			
 			#nav #back-options.ouvert {
-				transition: left 0.5s;
-				left: 0px;
+				-webkit-transition-duration: 0.3s;
+				-webkit-transform: translate(0px,0px);
+				   -moz-transition-duration: 0.3s;
+				   -moz-transform: translate(0px,0px);
+						transition-duration: 0.3s;
+						transform: translate(0px,0px);
+				/*transition: left 0.5s;*/
+				/*left: 0px;*/
 			}
 			
 			#nav #back-options.fermer {
-				transition: left 0.5s;
-				left:-300px;
+				-webkit-transition-duration: 0.3s;
+				-webkit-transform: translate(-300px,0px);
+				   -moz-transition-duration: 0.3s;
+				   -moz-transform: translate(-300px,0px);
+						transition-duration: 0.3s;
+						transform: translate(-300px,0px);
+				/*transition: left 0.5s;*/
+				/*left:-300px;*/
 			}
 			
 				#nav #options {
@@ -172,6 +200,10 @@ input:active,
 				
 						#nav #options input {
 							width: 100%;
+						}
+						
+						#nav #options .valider {
+							display: inline-block;
 						}
 	
 		#entete-bip {

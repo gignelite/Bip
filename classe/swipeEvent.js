@@ -1,5 +1,9 @@
 (function($) {
 	
+	SwipeEvent = (function() {
+		
+	})();
+	
 	$.fn.swipeEvent = function(options) {
 		var obj = this,
 			opt = arguments[0],
@@ -17,4 +21,5 @@
 		}
 		return obj;
 	};
+	
 })(JQuery);
